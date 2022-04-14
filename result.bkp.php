@@ -41,21 +41,22 @@
         cursor:pointer
       }
 
-      .col-1{
+      .col-1, .col-2, .col-3{
         padding-top: 535px;
-        margin-left: 120px;
+        display: inline-block;
       }
 
       .col-1{
-        width: 90%;
+        width: 38%;
+        margin-left: 5%;
         color: #146E37;
         font-weight: 700;
-        font-size: 32px;
+        font-size: 24px;
         vertical-align: text-top;
         line-height: 40px;
       }
 
-      /*.col-2{
+      .col-2{
         width: 20%;
         color:#fff;
         font-size: 17px;
@@ -70,7 +71,7 @@
         font-size: 28px;
         vertical-align: text-top;
         line-height: 40px;
-      } */
+      }
 
       .label{
         font-size:18px;
@@ -86,9 +87,9 @@
 
       .date{
         position: absolute;
-        margin-top: 365px;
-        margin-left: 555px;
-        font-size: 20px;
+        margin-top: 360px;
+        margin-left: 556px;
+        font-size: 32px;
         color: #fff;
         text-align: left;
       }
@@ -121,52 +122,56 @@
 
       .col-1 .first{
         display: block;
-        height: 70px;
+        height: 50px;
+        line-height: 60px;
+        background-color: #146E37;
+        margin: 10px 0;
+        padding: 8px 5px 10px 5px;
+        border-radius: 5px;
       }
 
       .foto {
         display: inline-block;
         background-position: center;
         background-size: cover;
-        width: 120px;
-        height: 120px;
-        border-radius: 0px 15px 15px 15px;
-        border: solid #146E37 8px;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+
       }
 
       .texto {
         display: inline-block;
         /*width: 130px;*/
-        padding-left: 20px;
-        color:#146E37;
-
+        height: 50px;
+        padding-left: 10px;
+        color:#fff;
       }
 
       .texto p {
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0;
+        padding: 0;
       }
-
       .texto span {
-        font-size: 18px;
-        font-weight: 300;
-      }
-
-      .recuperado {
-        line-height: 40px;
-        font-size: 20px!important;
-      }
-      .cashback {
-        font-size: 20px!important;
+        font-size: 12px;
       }
 
       .nometitulo{
-        font-weight: 700 !important;
-        color:#146E37;
-        font-size: 20px !important;
+        color:#fff;
+        font-size: 16px !important;
       }
 
-
+      .receber{
+        line-height: 76px;
+        font-size: 17px;
+        margin-bottom:13px;
+      }
+      .recebido{
+        line-height: 75px;
+        margin-bottom:13px;
+      }
     </style>
 
   </head>
@@ -254,61 +259,58 @@
       <div class="col-1">
         <div class="label opacity-0">.</div><br>
         <div class="first">
-        <div style="position:absolute; margin-left:-40px;">1° </div><div class="foto" style="background-image: url('img/<?= $foto1 ?>');">
+                  <div class=" foto" style="background-image: url('img/<?= $foto1 ?>');">
                   </div>
                   <div class="texto">
-                    <p class="nome"><span class="nometitulo"><?= $nome1 ?></span> <span class="cidade">- Biguiri</span><br>
+                    <p class="nome"><span class="nometitulo"><?= $nome1 ?></span><br>
                       <span class="cargo"><?= $cargo1 ?></span><br>
-                      Recuperado: <span class="recuperado"><?= $receber1 ?></span><br>
-                      Cashback: <span class="cashback" ><?= $recebido1 ?></span><br><br>
+                      <span class="agencia"><?= $agencia1 ?></span>
                     </p>
                   </div>
               </div>
 
-              <div class="first" style="margin-top: 100px;">
-              <div style="position:absolute; margin-left:-40px;">2° </div><div class=" foto" style="background-image: url('img/<?= $foto2 ?>');">
+              <div class="first">
+                  <div class=" foto" style="background-image: url('img/<?= $foto2 ?>');">
                   </div>
                   <div class="texto">
-                    <p class="nome"><span class="nometitulo"><?= $nome2 ?></span> <span class="cidade">- Biguiri</span><br>
+                    <p class="nome"><span class="nometitulo"><?= $nome2 ?></span><br>
                       <span class="cargo"><?= $cargo2 ?></span><br>
-                      Recuperado: <span class="recuperado"><?= $receber2 ?></span><br>
-                      Cashback: <span class="cashback"><?= $recebido2 ?></span><br><br>
+                      <span class="agencia"><?= $agencia2 ?></span>
                     </p>
                   </div>
               </div>
 
-              <div class="first" style="margin-top: 100px;">
-              <div style="position:absolute; margin-left:-40px;">3° </div><div class=" foto" style="background-image: url('img/<?= $foto3 ?>');">
+              <div class="first">
+                  <div class=" foto" style="background-image: url('img/<?= $foto3 ?>');">
                   </div>
                   <div class="texto">
-                    <p class="nome"><span class="nometitulo"><?= $nome3 ?></span><span class="cidade">- Andradina</span><br>
+                    <p class="nome"><span class="nometitulo"><?= $nome3 ?></span><br>
                     <span class="cargo"><?= $cargo3 ?></span><br>
-                    Recuperado: <span class="recuperado"><?= $receber3 ?></span><br>
-                    Cashback: <span class="cashback"><?= $recebido3 ?></span><br><br>
-                    </p>
+                    <span class="agencia"><?= $agencia3 ?></span></p>
                   </div>
               </div>
+        <?= $cidades ?>
       </div>
 
-    <!--  <div class="col-2">
+      <div class="col-2">
         <div class="label" style="margin-top: 0px !important;">Total a receber</div><br>
         <div class="receber">
-          // $receber1 <br>
-          // $receber2 <br>
-          //$receber3 <br>
+          <?= $receber1 ?><br>
+          <?= $receber2 ?><br>
+          <?= $receber3 ?><br>
         </div>
-         //$totalreceber
+        <?= $totalreceber ?>
       </div>
 
       <div class="col-3">
         <div class="label">Total recebido</div><br>
         <div class="recebido">
-           //$recebido1 <br>
-           //$recebido2 <br>
-          //$recebido3 <br>
+          <?= $recebido1 ?><br>
+          <?= $recebido2 ?><br>
+          <?= $recebido3 ?><br>
         </div>
-         //$totalrecebido
-      </div> -->
+        <?= $totalrecebido ?>
+      </div>
 
     </div>
 
