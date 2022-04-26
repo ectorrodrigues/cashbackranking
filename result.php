@@ -174,34 +174,25 @@
 
     <?php
 
-    $cidades = $_POST['cidades'];
-    $cidades = nl2br($cidades);
-
-    $totalreceber = $_POST['totalreceber'];
-    $totalreceber = nl2br($totalreceber);
-
-    $totalrecebido = $_POST['totalrecebido'];
-    $totalrecebido = nl2br($totalrecebido);
-
     $data = $_POST['data'];
 
     $nome1    = $_POST['nome1'];
     $cargo1   = $_POST['cargo1'];
-    $agencia1 = $_POST['agencia1'];
     $receber1 = $_POST['receber1'];
     $recebido1 = $_POST['recebido1'];
+    $cidade1   = $_POST['cidade1'];
 
     $nome2    = $_POST['nome2'];
     $cargo2   = $_POST['cargo2'];
-    $agencia2 = $_POST['agencia2'];
     $receber2 = $_POST['receber2'];
     $recebido2 = $_POST['recebido2'];
+    $cidade2   = $_POST['cidade2'];
 
     $nome3    = $_POST['nome3'];
     $cargo3   = $_POST['cargo3'];
-    $agencia3 = $_POST['agencia3'];
     $receber3 = $_POST['receber3'];
     $recebido3 = $_POST['recebido3'];
+    $cidade3   = $_POST['cidade3'];
 
     $_UP['folder']	= 'img/';
 
@@ -257,7 +248,7 @@
         <div style="position:absolute; margin-left:-40px;">1° </div><div class="foto" style="background-image: url('img/<?= $foto1 ?>');">
                   </div>
                   <div class="texto">
-                    <p class="nome"><span class="nometitulo"><?= $nome1 ?></span> <span class="cidade">- Biguiri</span><br>
+                    <p class="nome"><span class="nometitulo"><?= $nome1 ?></span> <span class="cidade"><?= $cidade1 ?></span><br>
                       <span class="cargo"><?= $cargo1 ?></span><br>
                       Recuperado: <span class="recuperado"><?= $receber1 ?></span><br>
                       Cashback: <span class="cashback" ><?= $recebido1 ?></span><br><br>
@@ -269,7 +260,7 @@
               <div style="position:absolute; margin-left:-40px;">2° </div><div class=" foto" style="background-image: url('img/<?= $foto2 ?>');">
                   </div>
                   <div class="texto">
-                    <p class="nome"><span class="nometitulo"><?= $nome2 ?></span> <span class="cidade">- Biguiri</span><br>
+                    <p class="nome"><span class="nometitulo"><?= $nome2 ?></span> <span class="cidade"><?= $cidade2 ?></span><br>
                       <span class="cargo"><?= $cargo2 ?></span><br>
                       Recuperado: <span class="recuperado"><?= $receber2 ?></span><br>
                       Cashback: <span class="cashback"><?= $recebido2 ?></span><br><br>
@@ -281,7 +272,7 @@
               <div style="position:absolute; margin-left:-40px;">3° </div><div class=" foto" style="background-image: url('img/<?= $foto3 ?>');">
                   </div>
                   <div class="texto">
-                    <p class="nome"><span class="nometitulo"><?= $nome3 ?></span><span class="cidade">- Andradina</span><br>
+                    <p class="nome"><span class="nometitulo"><?= $nome3 ?></span><span class="cidade"><?= $cidade3 ?></span><br>
                     <span class="cargo"><?= $cargo3 ?></span><br>
                     Recuperado: <span class="recuperado"><?= $receber3 ?></span><br>
                     Cashback: <span class="cashback"><?= $recebido3 ?></span><br><br>
